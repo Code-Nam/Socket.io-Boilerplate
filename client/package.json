@@ -1,0 +1,15 @@
+{
+    "private": true,
+    "devDependencies": {
+        "prettier": "^3.5.3",
+        "typescript": "^5.8.3"
+    },
+    "dependencies": {
+        "socket.io-client": "^4.8.1"
+    },
+    "scripts": {
+        "dev": "tsx watch src/index.ts",
+        "lint:prettier": "prettier --check .",
+        "format": "prettier --write ."
+    }
+}
