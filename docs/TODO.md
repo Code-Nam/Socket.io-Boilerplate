@@ -1,17 +1,44 @@
-# TODO Example
+## Server & Client
+- [ ] Docker: write dev compose
+- [ ] Docker: write compose
+- [ ] Docker: write Dockerfile
+- [ ] Docker: write .dockerignore
+- [ ] ESLint: write config
+- [ ] ESLint: script check
+- [ ] ESLint: script lint
 
-## High Priority
-- [ ] Task 1: Description of high priority task
-- [ ] Task 2: Another important task to complete
+## Client
+- [ ] HTML: create index 
+- [ ] Socket.io: implement listeners
 
-## Medium Priority
-- [ ] Task 3: Description of medium priority task
-- [ ] Task 4: Another medium priority item
+## Server
+- [ ] Socket.io: create socket types
+- [ ] Socket.io: create server
+- [ ] Socket.io/Typescript: create socket-data types
+- [ ] Socket.io: implement connection event
+- [ ] Socket.io: implement disconnect event
+- [ ] Socket.io: implement events
+- [ ] Socket.io: create middleware for JWT example
+- [ ] JWT: create JWT class
+- [ ] JWT: create sign and verify methods
+- [ ] JWT: implement testing for JWT class
+- [ ] Environnement: create .env.example and JWT_SECRET_KEY
 
-## Low Priority
-- [ ] Task 5: Description of low priority task
-- [ ] Task 6: Nice-to-have feature implementation
+## Shared
+- [ ] Typescript: create data model folder and an example
+- [ ] Git: create .gitignore
+- [ ] Socket.io: create server-client events
+- [ ] Socket.io: create client-server events
+- [ ] jest: create client-server events tests
+- [ ] jest: create server-client events tests
+- [ ] Socket.io: create example payloads for server-client events 
+- [ ] Zod: create example validation for schema
 
-## Completed
-- [x] Completed task 1: Description of completed work
-- [x] Completed task 2: Another finished task
+## DevOps
+- [ ] Github Actions: check lint
+- [ ] Github Actions: check socket.io tests
+- [ ] Github Actions: build and push docker Image (main)
+
+## Docs 
+- [ ] README: project structure
+- [ ] Excalidraw: implement design system
