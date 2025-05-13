@@ -1,4 +1,7 @@
+# TODO List
+
 ## Server & Client
+
 - [ ] Typescript: Setup paths for shared
 - [ ] Docker: write dev compose
 - [ ] Docker: write compose
@@ -9,10 +12,12 @@
 - [ ] ESLint: script lint
 
 ## Client
-- [ ] HTML: create index 
+
+- [ ] HTML: create index
 - [ ] Socket.io: implement listeners
 
 ## Server
+
 - [ ] Socket.io: create socket types
 - [x] Socket.io: create server
 - [ ] Socket.io/Typescript: create socket-data types
@@ -27,20 +32,24 @@
 - [x] Environnement: create SOCKET_PORT
 
 ## Shared
+
 - [ ] Typescript: create data model folder and an example
-- [ ] Git: create .gitignore
-- [ ] Socket.io: create server-client events
-- [ ] Socket.io: create client-server events
+- [x] Typescript: create reponse folder and affiliated files
+- [x] Socket.io: create server-client events
+- [x] Socket.io: create client-server events
+- [x] Socket.io: create README.md for events
 - [ ] jest: create client-server events tests
 - [ ] jest: create server-client events tests
-- [ ] Socket.io: create example payloads for server-client events 
+- [ ] Socket.io: create example payloads for server-client events
 - [ ] Zod: create example validation for schema
 
 ## DevOps
+
 - [ ] Github Actions: check lint
 - [ ] Github Actions: check socket.io tests
 - [ ] Github Actions: build and push docker Image (main)
 
-## Docs 
+## Docs
+
 - [ ] README: project structure
 - [ ] Excalidraw: implement design system
