@@ -18,12 +18,12 @@
 
 ## Server
 
-- [ ] Socket.io: create socket types
+- [x] Socket.io: create socket types
 - [x] Socket.io: create server
 - [ ] Socket.io/Typescript: create socket-data types
 - [x] Socket.io: implement connection event
 - [x] Socket.io: implement disconnect event
-- [ ] Socket.io: implement events
+- [x] Socket.io: implement events
 - [ ] Socket.io: create middleware for JWT example
 - [ ] JWT: create JWT class
 - [ ] JWT: create sign and verify methods
@@ -41,6 +41,7 @@
 - [ ] jest: create client-server events tests
 - [ ] jest: create server-client events tests
 - [ ] Socket.io: create example payloads for server-client events
+- [x] Socket.io: create example payloads for client-server events
 - [ ] Zod: create example validation for schema
 
 ## DevOps
