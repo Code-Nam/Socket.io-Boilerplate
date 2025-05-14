@@ -1,6 +1,10 @@
+import { ServerToClientEvents } from "shared/events/server-to-client";
+import { ClientsToServerEvents } from "shared/events/client-to-server";
+
 import { DefaultEventsMap, Server } from "socket.io";
 
-//TODO: add events client-server & server-client and socket-data types
-export const io = new Server<DefaultEventsMap>({
+const io = new Server<ServerToClientEvents, ClientsToServerEvents ,DefaultEventsMap>({
   serveClient: false,
 });
+
+export default io;

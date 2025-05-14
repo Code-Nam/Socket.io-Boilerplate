@@ -1,12 +1,16 @@
 import 'dotenv/config';
 
-import { io } from './server';
+import io from './server';
+import { SocketType } from '#/socket';
+import { MessageHandler } from './socket/handlers/message';
 
-io.on('connection', (socket) => {
-  console.log(`Client connected: ${socket.id}`);
+io.on('connection', (socket: SocketType) => {
+  console.log(`Socket ${socket.id} connected`);
+
+  new MessageHandler(io, socket);
 
   socket.on('disconnect', () => {
-    console.log(`Client disconnected: ${socket.id}`);
+    console.log(`Socket ${socket.id} disconnected`);
   });
 });
 
