@@ -2,13 +2,15 @@
     "private": true,
     "devDependencies": {
         "prettier": "^3.5.3",
-        "typescript": "^5.8.3"
+        "tsx": "^4.19.4",
+        "typescript": "^5.8.3",
+        "vite": "^6.3.5"
     },
     "dependencies": {
         "socket.io-client": "^4.8.1"
     },
     "scripts": {
-        "dev": "tsx watch src/index.ts",
+        "dev": "vite",
         "lint:prettier": "prettier --check .",
         "format": "prettier --write ."
     }

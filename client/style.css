@@ -1,0 +1,8 @@
+#root{
+  display: flex;
+}
+
+#outputMessage, #outputMessagePing{
+  display: flex;
+  flex-direction: column;
+}

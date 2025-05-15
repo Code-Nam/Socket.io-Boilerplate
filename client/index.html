@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="style.css"
+        />
+        <title>Client socket boilerplate</title>
+    </head>
+    <body>
+        <div id="root">
+            <div id="outputMessagePing">
+                <input
+                    id="inputMessagePing"
+                    type="text"
+                    placeholder="Type a message"
+                />
+                <ol></ol>
+            </div>
+            <div id="outputMessage">
+                <input
+                    id="inputMessage"
+                    type="text"
+                    placeholder="Type a message to send to Server"
+                />
+                <ol></ol>
+            </div>
+        </div>
+        <script
+            type="module"
+            src="/src/main.ts"
+        ></script>
+    </body>
+</html>

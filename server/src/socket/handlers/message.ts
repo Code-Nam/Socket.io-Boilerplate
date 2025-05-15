@@ -1,4 +1,4 @@
-import { SocketType } from "#/socket";
+import { SocketType } from "types/socket";
 import Server from "server";
 import { ResponseCallback } from "shared/response/callback";
 import { failure, success } from "shared/response/constructors";
@@ -15,14 +15,14 @@ export class MessageHandler {
     }
 
     private initHandlers = () => {
-        this.socket.on("message", this.handleMessage);
-        this.socket.on("message:ping", this.handleMessagePing);
-    }
+        this.socket.on("message", this.message);
+        this.socket.on("message:ping", this.messagePing);
+    };
 
-    private handleMessage = (payload: PayloadMessage, callback: ResponseCallback<null>) => {
+    private message = (payload: PayloadMessage, callback: ResponseCallback<null>) => {
         const { message } = payload;
         try {
-            console.log(`Socket ${this.socket.id} has sent a message: ${message}`);
+            console.log(`Socket ${this.socket.id} has sent a message - ${message}`);
 
             callback(success(null));
         } catch (error) {
@@ -31,10 +31,10 @@ export class MessageHandler {
         }
     };
 
-    private handleMessagePing = (payload: PayloadMessage, callback: ResponseCallback<string>) => {
+    private messagePing = (payload: PayloadMessage, callback: ResponseCallback<string>) => {
         const { message } = payload;
         try {
-            console.log(`Socket ${this.socket.id} has sent a message:ping: ${message}`);
+            console.log(`Socket ${this.socket.id} has sent a message:ping - ${message}`);
             callback(success("pong"));
         } catch (error) {
             console.error(error);
