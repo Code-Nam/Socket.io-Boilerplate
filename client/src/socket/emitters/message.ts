@@ -3,7 +3,7 @@ import type { Response } from "shared/response";
 
 import type { Socket } from "socket.io-client";
 
-export class SocketEmitters {
+export class MessageEmitters {
     private socket: Socket;
 
     constructor(socket: Socket) {
@@ -42,7 +42,7 @@ export class SocketEmitters {
             console.error(error);
             return "Error encountered while emitting message";
         }
-        
+
         // It's asynchronous why would i bother trying to return it in a synchronous method when it's only for example 💀
         return "Check console (im lazy)";
     };

@@ -7,7 +7,9 @@ import { MessageHandler } from "./socket/handlers/message";
 io.on("connection", (socket: SocketType) => {
     console.log(`Socket ${socket.id} connected`);
 
-    new MessageHandler(io, socket);
+    const messageHandler: MessageHandler = new MessageHandler(io, socket);
+
+    messageHandler.hello("Hello from server");
 
     socket.on("disconnect", () => {
         console.log(`Socket ${socket.id} disconnected`);

@@ -11,10 +11,10 @@ export class MessageHandler {
     constructor(io: typeof Server, socket: SocketType) {
         this.io = io;
         this.socket = socket;
-        this.initHandlers();
+        this.initListeners();
     }
 
-    private initHandlers = () => {
+    private initListeners = () => {
         this.socket.on("message", this.message);
         this.socket.on("message:ping", this.messagePing);
     };
@@ -39,6 +39,15 @@ export class MessageHandler {
         } catch (error) {
             console.error(error);
             callback(failure("Error handling message:ping"));
+        }
+    };
+
+    public hello = (message: string) => {
+        try {
+            this.socket.emit("hello", message);
+            console.log(`Socket ${this.socket.id} has sent ${message}`);
+        } catch (error) {
+            console.error(error);
         }
     };
 }
