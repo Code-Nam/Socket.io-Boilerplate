@@ -15,15 +15,16 @@
 
 - [x] HTML: create index
 - [x] Vite: create setup
-- [ ] Socket.io: implement listeners server-client events
+- [x] Socket.io: implement listeners server-client events
 - [x] Socket.io: implement emitters client-server events
 - [x] Environnement: create SOCKET_URL
+- [x] README: how to setup
 
 ## Server
 
 - [x] Socket.io: create socket types
 - [x] Socket.io: create server
-- [ ] Socket.io/Typescript: create socket-data types
+- [x] Socket.io/Typescript: create socket-data types
 - [x] Socket.io: implement connection event
 - [x] Socket.io: implement disconnect event
 - [x] Socket.io: implement events
@@ -36,17 +37,20 @@
 - [x] Environnement: create .env.example and JWT_SECRET_KEY
 - [x] Environnement: create SOCKET_PORT
 - [x] Environnement: create CORS_ORIGIN
+- [ ] Logger: create logger class
+- [ ] Logger: create logger type
+- [ ] Logger: create logs file
 
 ## Shared
 
-- [ ] Typescript: create data model folder and an example
+- [x] Typescript: create data model folder and an example
 - [x] Typescript: create reponse folder and affiliated files
 - [x] Socket.io: create server-client events
 - [x] Socket.io: create client-server events
 - [x] Socket.io: create README.md for events
 - [ ] jest: create client-server events tests
 - [ ] jest: create server-client events tests
-- [ ] Socket.io: create example payloads for server-client events
+- [x] Socket.io: create example payloads for server-client events
 - [x] Socket.io: create example payloads for client-server events
 - [ ] Zod: create example validation for schema
 
