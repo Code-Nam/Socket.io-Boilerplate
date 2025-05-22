@@ -2,13 +2,12 @@ import cors from "cors";
 import express from "express";
 import { createServer } from "node:http";
 
-import { ServerToClientEvents } from "shared/events/server-to-client";
-import { ClientsToServerEvents } from "shared/events/client-to-server";
-
 import { DefaultEventsMap, Server } from "socket.io";
 import { SocketData } from "types/socket-data";
 
 import { originConfig } from "./config/cors";
+import { ClientsToServerEvents } from "#/client-to-server";
+import { ServerToClientEvents } from "#/server-to-client";
 
 const app = express();
 const corsConfig = cors({
