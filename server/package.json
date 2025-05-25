@@ -19,6 +19,7 @@
         "dev": "tsx watch src/index.ts",
         "lint:prettier": "prettier --check .",
         "format": "prettier --write .",
-        "build": "npx tsc && npx tsc-alias"
+        "build": "npx tsc && npx tsc-alias",
+        "preview": "node build/src/index.js"
     }
 }
