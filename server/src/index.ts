@@ -3,6 +3,14 @@ import "dotenv/config";
 import io from "./server";
 import { SocketType } from "types/socket";
 import { MessageHandler } from "./socket/handlers/message";
+import { ExtendedError } from "socket.io";
+import { TokenUtils } from "./auth/tokenUtils";
+
+io.use((socket: SocketType, next: (error?: ExtendedError) => void) => {
+    //* setup middleware before connection event if needed
+    // const tokenUtils: TokenUtils = new TokenUtils();
+    // next();
+})
 
 io.on("connection", (socket: SocketType) => {
     console.log(`Socket ${socket.id} connected`);

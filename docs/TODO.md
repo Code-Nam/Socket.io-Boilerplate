@@ -10,6 +10,7 @@
 - [ ] ESLint: write config
 - [ ] ESLint: script check
 - [ ] ESLint: script lint
+- [ ] VSCODE: create snipet for events
 
 ## Client
 
@@ -28,11 +29,11 @@
 - [x] Socket.io: implement connection event
 - [x] Socket.io: implement disconnect event
 - [x] Socket.io: implement events
-- [ ] Socket.io: create middleware for JWT example
+- [x] Socket.io: create middleware for JWT example
 - [ ] Socket.io: create room example
 - [x] Socket.io: create cors origin for client (optional)
-- [ ] JWT: create JWT class
-- [ ] JWT: create sign and verify methods
+- [x] JWT: create JWT class
+- [x] JWT: create sign and verify methods
 - [ ] JWT: implement testing for JWT class
 - [x] Environnement: create .env.example and JWT_SECRET_KEY
 - [x] Environnement: create SOCKET_PORT
