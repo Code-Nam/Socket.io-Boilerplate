@@ -1,19 +1,25 @@
 {
     "private": true,
     "dependencies": {
+        "@types/express": "^5.0.2",
+        "cors": "^2.8.5",
         "dotenv": "^16.5.0",
         "jsonwebtoken": "^9.0.2",
+        "express": "^5.1.0",
         "socket.io": "^4.8.1"
     },
     "devDependencies": {
         "@types/jsonwebtoken": "^9.0.9",
         "prettier": "^3.5.3",
+        "tsc-alias": "^1.8.16",
         "tsx": "^4.19.4",
         "typescript": "^5.8.3"
     },
     "scripts": {
         "dev": "tsx watch src/index.ts",
         "lint:prettier": "prettier --check .",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "build": "npx tsc && npx tsc-alias",
+        "preview": "node build/src/index.js"
     }
 }
