@@ -7,9 +7,9 @@
 - [ ] Docker: write compose
 - [ ] Docker: write Dockerfile
 - [ ] Docker: write .dockerignore
-- [ ] ESLint: write config
-- [ ] ESLint: script check
-- [ ] ESLint: script lint
+- [x] ESLint: write config
+- [x] ESLint: script check
+- [x] ESLint: script lint
 - [ ] VSCODE: create snipet for events
 
 ## Client
