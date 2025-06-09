@@ -1,0 +1,12 @@
+name: socket-io-boilerplate
+
+services:
+  client:
+    build:
+      context: ./client
+    environment:
+      - API_URL=${API_URL:-http://localhost:3001}
+
+  server:
+    build:
+      context: ./server

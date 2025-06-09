@@ -1,0 +1,16 @@
+name: socket-io-boilerplate-dev
+
+services:
+  server:
+    build:
+      context: ./server
+      target: dev
+    ports:
+      - "3001:3001"
+    environment:
+      - JWT_SECRET=${JWT_SECRET_KEY:-your_secret_key}
+      - SOCKET_PORT=3001
+      - CORS_ORIGIN=${CORS_ORIGIN:-http://localhost:5173}
+    volumes:
+      - ./server:/app
+      - ./shared:/shared

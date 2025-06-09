@@ -3,10 +3,10 @@
 ## Server & Client
 
 - [x] Typescript: Setup paths for shared
-- [ ] Docker: write dev compose
-- [ ] Docker: write compose
-- [ ] Docker: write Dockerfile
-- [ ] Docker: write .dockerignore
+- [x] Docker: write dev compose
+- [x] Docker: write compose
+- [x] Docker: write Dockerfile
+- [x] Docker: write .dockerignore
 - [x] ESLint: write config
 - [x] ESLint: script check
 - [x] ESLint: script lint
@@ -65,4 +65,4 @@
 
 - [ ] README: project structure
 - [ ] ~~Excalidraw: implement design system~~
-- [ ] Excalidraw: create logic flow
+- [ ] ~~Excalidraw: create logic flow~~
