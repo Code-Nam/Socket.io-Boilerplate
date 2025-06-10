@@ -53,7 +53,7 @@
 - [ ] jest: create server-client events tests
 - [x] Socket.io: create example payloads for server-client events
 - [x] Socket.io: create example payloads for client-server events
-- [ ] Zod: create example validation for schema
+- [x] Zod: create example validation for schema
 
 ## DevOps
 

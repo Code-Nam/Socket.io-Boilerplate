@@ -2,6 +2,7 @@ import { SocketType } from "types/socket";
 import Server from "server";
 import { ResponseCallback } from "shared/response/callback";
 import { failure, success } from "shared/response/constructors";
+import { messageSchema } from "shared/validation/message";
 import { PayloadMessage } from "shared/payloads/payload-message";
 
 export class MessageHandler {
@@ -22,6 +23,9 @@ export class MessageHandler {
     private message = (payload: PayloadMessage, callback: ResponseCallback<null>) => {
         const { message } = payload;
         try {
+            if (!messageSchema.safeParse(message).success) {
+                throw new Error("Invalid message format");
+            }
             console.log(`Socket ${this.socket.id} has sent a message - ${message}`);
 
             callback(success(null));
@@ -34,6 +38,9 @@ export class MessageHandler {
     private messagePing = (payload: PayloadMessage, callback: ResponseCallback<string>) => {
         const { message } = payload;
         try {
+            if (!messageSchema.safeParse(message).success) {
+                throw new Error("Invalid message format");
+            }
             console.log(`Socket ${this.socket.id} has sent a message:ping - ${message}`);
             callback(success("pong"));
         } catch (error) {
