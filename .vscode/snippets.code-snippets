@@ -1,0 +1,22 @@
+{
+    "Socket.IO Listener Event": {
+        "scope": "javascript,typescript",
+        "prefix": "socketio-method-event-listener",
+        "body": [
+            "private $1 = (payload: $2, callback: ResponseCallback<$3>) => {",
+            "    try {",
+            "        const { $4 } = payloadMessageSchema.parse(payload);",
+            "",
+            "        $0",
+            "",
+            "        console.log(`Socket ${this.socket.id} has sent a $5 - ${{$4}}`);",
+            "        callback(success($6));",
+            "    } catch (error) {",
+            "        console.error(error);",
+            "        callback(failure(\"Error handling $5\"));",
+            "    }",
+            "};"
+        ],
+        "description": "Snippet for creating a Socket.IO client connection event listener"
+    }
+}

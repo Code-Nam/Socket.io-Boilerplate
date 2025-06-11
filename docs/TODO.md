@@ -10,7 +10,7 @@
 - [x] ESLint: write config
 - [x] ESLint: script check
 - [x] ESLint: script lint
-- [ ] VSCODE: create snipet for events
+- [x] VSCODE: create snipet for events
 
 ## Client
 
