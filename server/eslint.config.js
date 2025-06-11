@@ -1,23 +1,19 @@
-const {
-    defineConfig,
-} = require("eslint/config");
+import { defineConfig } from "eslint/config";
 
-const tsParser = require("@typescript-eslint/parser");
-const globals = require("globals");
-const typescriptEslint = require("@typescript-eslint/eslint-plugin");
-const js = require("@eslint/js");
+import tsParser from "@typescript-eslint/parser";
+import { node } from "globals";
+import typescriptEslint from "@typescript-eslint/eslint-plugin";
+import { configs } from "@eslint/js";
 
-const {
-    FlatCompat,
-} = require("@eslint/eslintrc");
+import { FlatCompat } from "@eslint/eslintrc";
 
 const compat = new FlatCompat({
     baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
+    recommendedConfig: configs.recommended,
+    allConfig: configs.all
 });
 
-module.exports = defineConfig([{
+export default defineConfig([{
     languageOptions: {
         parser: tsParser,
         ecmaVersion: "latest",
@@ -28,7 +24,7 @@ module.exports = defineConfig([{
         },
 
         globals: {
-            ...globals.node,
+            ...node,
         },
     },
 

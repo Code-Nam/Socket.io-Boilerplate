@@ -2,8 +2,7 @@ import { SocketType } from "types/socket";
 import Server from "server";
 import { ResponseCallback } from "shared/response/callback";
 import { failure, success } from "shared/response/constructors";
-import { messageSchema } from "shared/validation/message";
-import { PayloadMessage } from "shared/payloads/payload-message";
+import { payloadMessageSchema, type PayloadMessage } from "shared/payloads/message";
 
 export class MessageHandler {
     io: typeof Server;
@@ -21,11 +20,8 @@ export class MessageHandler {
     };
 
     private message = (payload: PayloadMessage, callback: ResponseCallback<null>) => {
-        const { message } = payload;
         try {
-            if (!messageSchema.safeParse(message).success) {
-                throw new Error("Invalid message format");
-            }
+            const { message } = payloadMessageSchema.parse(payload);
             console.log(`Socket ${this.socket.id} has sent a message - ${message}`);
 
             callback(success(null));
@@ -36,11 +32,8 @@ export class MessageHandler {
     };
 
     private messagePing = (payload: PayloadMessage, callback: ResponseCallback<string>) => {
-        const { message } = payload;
         try {
-            if (!messageSchema.safeParse(message).success) {
-                throw new Error("Invalid message format");
-            }
+            const { message } = payloadMessageSchema.parse(payload);
             console.log(`Socket ${this.socket.id} has sent a message:ping - ${message}`);
             callback(success("pong"));
         } catch (error) {
@@ -50,11 +43,11 @@ export class MessageHandler {
     };
 
     public hello = (message: string) => {
-        try {
-            this.socket.emit("hello", message);
-            console.log(`Socket ${this.socket.id} has sent ${message}`);
-        } catch (error) {
-            console.error(error);
-        }
+        const payload: PayloadMessage = {
+            message,
+        };
+
+        this.socket.emit("hello", payload);
+        console.log(`Socket ${this.socket.id} has sent ${message}`);
     };
 }

@@ -1,7 +1,7 @@
-import type { PayloadMessage } from "shared/payloads/payload-message";
+import { type PayloadMessage } from "shared/payloads/message";
 import type { Response } from "shared/response";
 
-import type { Socket } from "socket.io-client";
+import type { Socket } from "../socket";
 
 export class MessageEmitters {
     private socket: Socket;
@@ -15,17 +15,11 @@ export class MessageEmitters {
             message,
         };
 
-        //TODO: validate trycatch logic
-        try {
-            this.socket.emit("message", payload, (callback: Response<null>) => {
-                if (!callback.success) return callback.error;
-            });
+        this.socket.emit("message", payload, (callback: Response<null>) => {
+            if (!callback.success) return callback.error;
+        });
 
-            return "Message has been sent to Server";
-        } catch (error) {
-            console.error(error);
-            return "Error encountered while emitting message";
-        }
+        return "Message has been sent to Server";
     };
 
     public messagePing = (message: string): string => {
@@ -33,17 +27,11 @@ export class MessageEmitters {
             message,
         };
 
-        try {
-            this.socket.emit("message:ping", payload, (callback: Response<string>) => {
-                if (!callback.success) return callback.error;
-                console.log(callback.data);
-            });
-        } catch (error) {
-            console.error(error);
-            return "Error encountered while emitting message";
-        }
+        this.socket.emit("message:ping", payload, (callback: Response<string>) => {
+            if (!callback.success) return callback.error;
+            console.log(callback.data);
+        });
 
-        // It's asynchronous why would i bother trying to return it in a synchronous method when it's only for example 💀
         return "Check console (im lazy)";
     };
 }
