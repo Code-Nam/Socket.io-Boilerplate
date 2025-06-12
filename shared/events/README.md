@@ -32,3 +32,12 @@ Sends a message back to client
   // Callback
   string
 ```
+
+### welcome
+
+Emits welcome message to new socket client
+
+```ts
+  // Input
+  string
+```

@@ -17,6 +17,11 @@ export class MessageHandler {
     private initListeners = () => {
         this.socket.on("message", this.message);
         this.socket.on("message:ping", this.messagePing);
+
+        this.socket.join(this.socket.id);
+        this.io.to(this.socket.id).emit("welcome", {
+            message: `Welcome to the socket server, ${this.socket.id}!`,
+        } as PayloadMessage);
     };
 
     private message = (payload: PayloadMessage, callback: ResponseCallback<null>) => {

@@ -30,7 +30,7 @@
 - [x] Socket.io: implement disconnect event
 - [x] Socket.io: implement events
 - [x] Socket.io: create middleware for JWT example
-- [ ] Socket.io: create room example
+- [x] Socket.io: create room example
 - [x] Socket.io: create cors origin for client (optional)
 - [x] JWT: create JWT class
 - [x] JWT: create sign and verify methods

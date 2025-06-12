@@ -10,7 +10,7 @@ io.use((socket: SocketType, next: (error?: ExtendedError) => void) => {
     //* setup middleware before connection event if needed
     // const tokenUtils: TokenUtils = new TokenUtils();
     // next();
-})
+});
 
 io.on("connection", (socket: SocketType) => {
     console.log(`Socket ${socket.id} connected`);
