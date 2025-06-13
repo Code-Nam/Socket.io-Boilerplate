@@ -1,4 +1,4 @@
-import socket from "./socket";
+import socket from "./socket/socket";
 import { MessageEmitters } from "./socket/emitters/message";
 import { MessageListeners } from "./socket/listeners/message";
 
