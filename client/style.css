@@ -1,8 +1,9 @@
-#root{
-  display: flex;
+#root {
+    display: flex;
 }
 
-#outputMessage, #outputMessagePing{
-  display: flex;
-  flex-direction: column;
+#outputMessage,
+#outputMessagePing {
+    display: flex;
+    flex-direction: column;
 }

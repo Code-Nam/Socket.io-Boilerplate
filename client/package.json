@@ -20,7 +20,8 @@
         "start": "vite preview",
         "dev": "vite",
         "lint": "eslint **/*.ts && prettier --check .",
-        "lint:fix": "eslint '**/*.ts' --fix && prettier --write .",
+        "lint:fix": "eslint '**/*.ts' --fix",
+        "format": "prettier --write .",
         "typecheck": "tsc --noEmit"
     }
 }

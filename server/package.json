@@ -5,10 +5,13 @@
         "dotenv": "^16.5.0",
         "jsonwebtoken": "^9.0.2",
         "socket.io": "^4.8.1",
+        "winston": "^3.17.0",
+        "winston-daily-rotate-file": "^5.0.0",
         "zod": "^3.25.64"
     },
     "devDependencies": {
         "@types/jsonwebtoken": "^9.0.9",
+        "@types/winston": "^2.4.4",
         "eslint-config-prettier": "^10.1.5",
         "eslint-plugin-prettier": "^5.4.1",
         "prettier": "^3.5.3",
@@ -23,7 +26,8 @@
         "build": "tspc",
         "start": "node build/server/src/index.js",
         "lint": "eslint **/*.ts && prettier --check .",
-        "lint:fix": "eslint '**/*.ts' --fix && prettier --write .",
+        "lint:fix": "eslint '**/*.ts' --fix",
+        "format": "prettier --write .",
         "typecheck": "tsc --noEmit"
     }
 }

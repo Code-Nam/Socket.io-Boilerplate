@@ -61,29 +61,29 @@ This client uses [Vite](https://vitejs.dev/) for lightning-fast development and 
 
 3. Create your React entry point (e.g., `src/App.tsx`) and update `src/main.ts` to render your app:
 
-  ```tsx
-  // src/App.tsx
-  import React from "react";
+```tsx
+// src/App.tsx
+import React from "react";
 
-  const App: React.FC = () => {
+const App: React.FC = () => {
     return <h1>Hello, Socket.io Boilerplate!</h1>;
-  };
+};
 
-  export default App;
-  ```
+export default App;
+```
 
-  ```tsx
-  // src/main.ts
-  import React from "react";
-  import ReactDOM from "react-dom/client";
-  import App from "./App";
+```tsx
+// src/main.ts
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-  ReactDOM.createRoot(document.getElementById("root")!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
-    <App />
-    </React.StrictMode>
-  );
-  ```
+        <App />
+    </React.StrictMode>,
+);
+```
 
 ### Adding Vue 🟩
 
@@ -112,28 +112,28 @@ This client uses [Vite](https://vitejs.dev/) for lightning-fast development and 
 
 3. Create your Vue components (e.g., `src/App.vue`) and update your entry point (typically `src/main.ts`) to mount the Vue app:
 
-      ```vue
-      <!-- src/App.vue -->
-      <template>
+    ```vue
+    <!-- src/App.vue -->
+    <template>
         <h1>Hello, Socket.io Boilerplate!</h1>
-      </template>
+    </template>
 
-      <script setup lang="ts">
-      // Add your component logic here
-      </script>
+    <script setup lang="ts">
+    // Add your component logic here
+    </script>
 
-      <style scoped>
-      /* Add your styles here */
-      </style>
-      ```
+    <style scoped>
+    /* Add your styles here */
+    </style>
+    ```
 
-  ```typescript
-  // src/main.ts
-  import { createApp } from "vue";
-  import App from "./App.vue";
+```typescript
+// src/main.ts
+import { createApp } from "vue";
+import App from "./App.vue";
 
-  createApp(App).mount("#app");
-  ```
+createApp(App).mount("#app");
+```
 
 ## Development 🧑‍💻
 

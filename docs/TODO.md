@@ -38,9 +38,9 @@
 - [x] Environnement: create .env.example and JWT_SECRET_KEY
 - [x] Environnement: create SOCKET_PORT
 - [x] Environnement: create CORS_ORIGIN
-- [ ] Logger: create logger class
-- [ ] Logger: create logger type
-- [ ] Logger: create logs file
+- [x] Logger: create logger
+- [x] Logger: daily functionality
+- [x] Logger: create logs file
 
 ## Shared
 
@@ -57,7 +57,7 @@
 
 ## DevOps
 
-- [ ] Github Actions: check lint
+- [x] Github Actions: check lint
 - [ ] Github Actions: check socket.io tests
 - [ ] Github Actions: build and push docker Image (main)
 

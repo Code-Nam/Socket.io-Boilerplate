@@ -1,4 +1,4 @@
 export type Token = {
-  data: any; //! change this
-  tokenType: "Authorization" | "Authentification";
-}
+    data: any; //! change this
+    tokenType: "Authorization" | "Authentification";
+};

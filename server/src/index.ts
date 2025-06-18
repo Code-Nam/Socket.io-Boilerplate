@@ -5,6 +5,7 @@ import { SocketType } from "types/socket";
 import { MessageHandler } from "./socket/handlers/message";
 import { ExtendedError } from "socket.io";
 import { TokenUtils } from "./auth/tokenUtils";
+import { logger } from "./logger";
 
 io.use((socket: SocketType, next: (error?: ExtendedError) => void) => {
     //* setup middleware before connection event if needed
@@ -13,14 +14,14 @@ io.use((socket: SocketType, next: (error?: ExtendedError) => void) => {
 });
 
 io.on("connection", (socket: SocketType) => {
-    console.log(`Socket ${socket.id} connected`);
+    logger.info(`Socket ${socket.id} connected`);
 
     const messageHandler: MessageHandler = new MessageHandler(io, socket);
 
     messageHandler.hello("Hello from server");
 
     socket.on("disconnect", () => {
-        console.log(`Socket ${socket.id} disconnected`);
+        logger.info(`Socket ${socket.id} disconnected`);
     });
 });
 
